@@ -711,3 +711,42 @@ ul {
         gap: 2rem;
     }
 }
+
+/* Timeline Expandable Details */
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.timeline-header div {
+    flex: 1;
+}
+
+.toggle-details {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.timeline-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.timeline-content.expanded .timeline-details {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.timeline-content.expanded .toggle-details {
+    transform: rotate(180deg);
+}

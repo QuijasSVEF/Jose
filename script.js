@@ -62,6 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Timeline Expandable Details
+    document.querySelectorAll('.timeline-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.parentElement;
+            content.classList.toggle('expanded');
+        });
+    });
+
     // Add animation class styles dynamically
     const styleSheet = document.createElement("style");
     styleSheet.textContent = `
