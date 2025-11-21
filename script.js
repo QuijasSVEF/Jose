@@ -36,6 +36,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Contact Form Handling
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+            formStatus.style.display = 'none';
+            formStatus.className = '';
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.innerText = "Thanks for your message! I'll get back to you soon.";
+                    formStatus.style.color = 'var(--accent-primary)';
+                    formStatus.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    const data = await response.json();
+                    if (Object.hasOwnProperty.call(data, 'errors')) {
+                        formStatus.innerText = data.errors.map(error => error.message).join(", ");
+                    } else {
+                        formStatus.innerText = "Oops! There was a problem submitting your form.";
+                    }
+                    formStatus.style.color = 'red';
+                    formStatus.style.display = 'block';
+                }
+            } catch (error) {
+                formStatus.innerText = "Oops! There was a problem submitting your form.";
+                formStatus.style.color = 'red';
+                formStatus.style.display = 'block';
+            } finally {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
     // Scroll Animation (Fade In)
     const observerOptions = {
         root: null,

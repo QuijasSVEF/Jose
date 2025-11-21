@@ -333,17 +333,18 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form">
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mjkzkezp" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
                         </div>
                         <button type="submit" class="btn-primary">Send Message</button>
+                        <p id="form-status" style="margin-top: 1rem; display: none;"></p>
                     </form>
                 </div>
             </div>
