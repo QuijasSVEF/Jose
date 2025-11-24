@@ -401,7 +401,345 @@ ul {
     color: var(--text-secondary);
 }
 
-/* Work Section */
+/* Technical Capabilities Section */
+.capabilities {
+    background-color: var(--bg-secondary);
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.capability-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.capability-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent-primary);
+}
+
+.capability-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: var(--accent-gradient);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.capability-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.capability-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: #e0f2f1;
+    color: var(--accent-secondary);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(38, 166, 154, 0.2);
+}
+
+/* Current Programs Section */
+.programs {
+    background-color: white;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.program-card {
+    background: var(--bg-secondary);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid var(--glass-border);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(38, 166, 154, 0.15);
+    border-color: var(--accent-primary);
+}
+
+.program-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--accent-primary);
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.program-icon-overlay {
+    position: absolute;
+    font-size: 1.2rem;
+    top: -8px;
+    right: -8px;
+    background: var(--accent-gradient);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.program-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+}
+
+.program-tagline {
+    font-size: 0.95rem;
+    color: var(--accent-secondary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.program-card>p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.program-focus {
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.program-focus strong {
+    color: var(--text-primary);
+}
+
+/* Strategic Frameworks Section */
+.strategy {
+    background: linear-gradient(135deg, #e0f2f1 0%, #f0fdfa 100%);
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.strategy-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.strategy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.strategy-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    background: var(--accent-gradient);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.strategy-card h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.strategy-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.strategy-list li {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    align-items: flex-start;
+}
+
+.strategy-list i {
+    color: var(--accent-primary);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.strategy-quote {
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: #e0f2f1;
+    border-left: 4px solid var(--accent-primary);
+    border-radius: 8px;
+    font-style: italic;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Speaking & Partnerships Section */
+.speaking {
+    background-color: white;
+}
+
+.speaking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+}
+
+.speaking-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.speaking-icon {
+    font-size: 2rem;
+    color: var(--accent-primary);
+}
+
+.speaking-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.topics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topics-list li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-primary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.topics-list li:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-soft);
+}
+
+.topics-list strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.partnership-categories {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.partnership-category {
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+.partnership-category:hover {
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-soft);
+}
+
+.partnership-category h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.partnership-category i {
+    color: var(--accent-primary);
+    font-size: 1.2rem;
+}
+
+.partnership-category p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Work Section (Legacy - can be removed) */
 .work {
     background-color: var(--bg-secondary);
 }
@@ -942,7 +1280,8 @@ ul {
     .about-grid,
     .services-grid,
     .contact-wrapper,
-    .media-grid {
+    .media-grid,
+    .speaking-grid {
         grid-template-columns: 1fr;
     }
 
@@ -957,6 +1296,24 @@ ul {
 
     .timeline-item::after {
         left: 23px;
+    }
+
+    /* New sections responsive */
+    .capabilities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .strategy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .speaking-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
